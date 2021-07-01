@@ -20,5 +20,10 @@ namespace Demo.Controllers
         {
             return Ok("Okie baby nà aaa " + id);
         }
+        [HttpPost]
+        public IActionResult Post([FromHeader]string value)
+        {
+            return Ok($"The value + {value}");
+        }
     }
 }
